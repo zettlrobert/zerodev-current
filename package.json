@@ -1,0 +1,24 @@
+{
+  "name": "zerodev",
+  "version": "1.0.0",
+  "description": "Node Backend with Express Server and React CLientside frontend",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "server": "nodemon server.js",
+    "client": "npm start --prefix client",
+    "dev": "BROWSER=google-chrome concurrently \"npm run server\" \"npm run client\""
+  },
+  "author": "zettlrobert",
+  "license": "ISC",
+  "dependencies": {
+    "config": "^3.2.5",
+    "express": "^4.17.1",
+    "materialize-css": "^1.0.0",
+    "react-router-dom": "^5.1.2"
+  },
+  "devDependencies": {
+    "concurrently": "^5.0.2",
+    "nodemon": "^2.0.2"
+  }
+}
