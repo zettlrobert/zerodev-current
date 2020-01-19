@@ -1,7 +1,17 @@
-$primary: teal;
+@import '_colors';
+@import 'carousel';
 
-$primary-background: #dbdbdb;
+*,
+html {
+    ;
+    color: $text-primary;
+}
 
-body {
-  background-color: $primary-background;
+.main-container {
+    background-color: $background-dark;
+    min-height: 100vh;
+}
+
+.material-icons {
+    color: $text-primary;
 }

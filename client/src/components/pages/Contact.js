@@ -6,6 +6,7 @@ const Contact = () => {
   return (
     <Fragment>
       <Navbar />
+      <h1>Contacts</h1>
     </Fragment>
   )
 }

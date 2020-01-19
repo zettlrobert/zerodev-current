@@ -1,7 +1,7 @@
 import React, { Fragment, useEffect } from 'react'
 
 import Navbar from '../layout/Navbar';
-
+import Carousel from '../Carousel/Carousel'
 
 const Home = () => {
 
@@ -25,10 +25,8 @@ const Home = () => {
     <Fragment>
       <Navbar />
       <h1>HOME</h1>
-      {sliderData.map(element => {
-        console.log(element.title)
 
-      })}
+      <Carousel />
     </Fragment>
   )
 }
