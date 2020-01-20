@@ -10,7 +10,7 @@ const Carousel = () => {
 
   useEffect(() => {
     changeRender();
-    carouselAnimaiton(carouselItems);
+    // carouselAnimaiton(carouselItems);
 
   }, [])
 

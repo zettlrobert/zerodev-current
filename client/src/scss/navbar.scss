@@ -1,0 +1,24 @@
+@import "_colors";
+
+.navStyle {
+  //   border: 2px solid red;
+}
+
+.nav-wrapper {
+  border: 3px solid white;
+  background-color: $primary;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logoStyle {
+  height: 55px;
+  align-items: flex-start;
+}
+
+.hide-on-med-and-down {
+  display: flex;
+  text-decoration: none;
+  list-style-type: none;
+}

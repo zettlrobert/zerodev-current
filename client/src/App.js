@@ -1,7 +1,5 @@
 import React, { Fragment, useEffect } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import 'materialize-css/dist/css/materialize.min.css'
-import M from 'materialize-css/dist/js/materialize.min.js'
 
 import './scss/main.scss'
 
@@ -17,7 +15,7 @@ import CarouselState from './context/carousel/CarouselState';
 function App() {
   useEffect(() => {
     //Init Materialize JS
-    M.AutoInit();
+    console.log("App Mounted...")
   })
 
   return (

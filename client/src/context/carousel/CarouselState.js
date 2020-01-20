@@ -42,14 +42,7 @@ const CarouselState = props => {
   //Actions
   const changeRender = () => {
 
-    state.carouselItems.forEach((item, index) => {
-      setTimeout(() => {
-        console.log(`Hello from State: ${item}`);
 
-
-
-      }, index * 1000)
-    })
 
     dispatch({
       type: RENDER_CAROUSELITEMS,

@@ -1,27 +1,20 @@
-@import '_colors';
-@import 'carouselItem';
+@import "_colors";
+@import "carouselItem";
 
 *,
 html {
-    color: $text-primary;
+  background-origin: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 .main-container {
-    background-color: $background-dark;
-    min-height: 100vh;
+  background-color: $background-dark;
+  width: 100vw;
+  min-height: 100vh;
 }
 
 .material-icons {
-    color: $text-primary;
-}
-
-
-// Carousel
-.carousel-container {
-    border: 2px solid white;
-    text-align: center;
-}
-
-.material-icons {
-    font-size: 5rem;
+  color: $text-primary;
+  font-size: 5rem;
 }
