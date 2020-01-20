@@ -1,15 +1,19 @@
-import React, { Fragment } from 'react'
+import React, { useEffect } from 'react'
 
-import '../../scss/carousel.scss';
+import '../../scss/carouselItem.scss';
 
-const CarouselItem = () => {
+const CarouselItem = ({ carouselItem }) => {
+
+  const { changeRender, title, icon, render } = carouselItem
+
   return (
-    <div>
-      <h1>CarouselItem</h1>
+    <div className="carouselItem-container">
+      <div className="carouselItems">
+        <i className="material-icons">{icon}</i>
+        <h2>{title}</h2>
+      </div>
     </div>
   )
 }
-
-
 
 export default CarouselItem

@@ -10,6 +10,9 @@ import Contact from './components/pages/Contact'
 import About from './components/pages/About';
 import Projects from './components/pages/Projects'
 
+//States
+import ContactState from './context/carousel/CarouselState';
+import CarouselState from './context/carousel/CarouselState';
 
 function App() {
   useEffect(() => {
@@ -18,18 +21,20 @@ function App() {
   })
 
   return (
-    <Router>
-      <Fragment>
-      <div className="main-container">
-        <Switch>
-          <Route exact path='/' component={Home}></Route>
-          <Route exact path='/contact' component={Contact}></Route>
-          <Route exact path='/about' component={About}></Route>
-          <Route exact path='/projects' component={Projects}></Route>
-        </Switch>
-      </div> 
-      </Fragment>
-    </Router>
+    <CarouselState>
+      <Router>
+        <Fragment>
+          <div className="main-container">
+            <Switch>
+              <Route exact path='/' component={Home}></Route>
+              <Route exact path='/contact' component={Contact}></Route>
+              <Route exact path='/about' component={About}></Route>
+              <Route exact path='/projects' component={Projects}></Route>
+            </Switch>
+          </div>
+        </Fragment>
+      </Router>
+    </CarouselState>
 
   );
 }

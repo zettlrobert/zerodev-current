@@ -1,0 +1,18 @@
+{
+  "carouselItems": [{
+    "title": "I am Robert",
+    "icon": "account_circle"
+  }, {
+    "title": "Fullstack Developer",
+    "icon": "code"
+  }, {
+    "title": "UI and UX Designer",
+    "icon": "swatchbook"
+  }, {
+    "title": "Open Source Lover",
+    "icon": "thumb_up"
+  }, {
+    "title": "A personal Solution for you",
+    "icon": "devices_other"
+  }]
+}

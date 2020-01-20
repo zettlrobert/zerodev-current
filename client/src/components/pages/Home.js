@@ -24,9 +24,10 @@ const Home = () => {
   return (
     <Fragment>
       <Navbar />
-      <h1>HOME</h1>
 
-      <Carousel />
+      <div>
+        <Carousel />
+      </div>
     </Fragment>
   )
 }

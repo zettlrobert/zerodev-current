@@ -1,12 +1,26 @@
 import {
-  GET_CAROUSELITEM
+  GET_CAROUSELITEMS, RENDER_CAROUSELITEMS
 } from '../types';
+
 
 export default (state, action) => {
   switch (action.type) {
-    case GET_CAROUSELITEM;
+    case GET_CAROUSELITEMS:
       return {
-        ...state
+        ...state,
+        carouselItems: action.payload
       }
+
+    case RENDER_CAROUSELITEMS:
+      return {
+        ...state,
+        render: state.carouselItems.map(item => {
+          item.render = true
+        })
+
+      }
+
+    default:
+      return state;
   }
 }
