@@ -1,24 +1,44 @@
-@import "_colors";
+@import '_colors';
 
-.navStyle {
-  //   border: 2px solid red;
-}
-
-.nav-wrapper {
-  border: 3px solid white;
+.navigation-wrapper {
   background-color: $primary;
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
 }
 
-.logoStyle {
-  height: 55px;
-  align-items: flex-start;
+.logo-wrapper {
+  padding: 0;
+  margin: .2rem 2rem;
 }
 
-.hide-on-med-and-down {
-  display: flex;
-  text-decoration: none;
+img {
+  max-height: 5vh;
+}
+
+ul {
   list-style-type: none;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-right: 2rem;
+}
+
+
+a,
+a:visited,
+a:hover,
+a:active,
+a:focus {
+  font-size: 1.4rem;
+  text-decoration: none;
+  color: $text-primary;
+}
+
+a:hover,
+a:active {
+  transition: 0.6s ease-in-out;
+  background-color: $primary-accent;
+  border-bottom: 1px solid white;
+  border-radius: 5px;
 }

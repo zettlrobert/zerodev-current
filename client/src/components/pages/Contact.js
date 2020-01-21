@@ -1,16 +1,11 @@
-import React, { Fragments, Fragment } from 'react'
-
-import Navbar from '../layout/Navbar'
+import React from 'react'
 
 const Contact = () => {
   return (
-    <Fragment>
-      <Navbar />
-      <h1>Contacts</h1>
-    </Fragment>
+    <div>
+      Contact
+    </div>
   )
 }
-
-
 
 export default Contact

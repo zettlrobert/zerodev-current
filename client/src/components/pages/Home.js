@@ -1,19 +1,10 @@
-import React, { Fragment, useEffect } from 'react'
-
-import Navigation from '../layout/Navbar';
-import Carousel from '../Carousel/Carousel'
+import React from 'react'
 
 const Home = () => {
-
-
   return (
-    <Fragment>
-      <Navigation />
-
-      <div>
-        {/* <Carousel /> */}
-      </div>
-    </Fragment>
+    <div>
+      Home
+    </div>
   )
 }
 

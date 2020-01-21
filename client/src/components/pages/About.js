@@ -1,15 +1,11 @@
-import React, { Fragment } from 'react'
-
-import Navbar from '../layout/Navbar'
+import React from 'react'
 
 const About = () => {
   return (
-    <Fragment>
-      <Navbar />
-      <h1>ABOUT</h1>
-    </Fragment>
+    <div>
+      About
+    </div>
   )
 }
-
 
 export default About

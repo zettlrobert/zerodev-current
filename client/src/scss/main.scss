@@ -1,17 +1,37 @@
 @import "_colors";
-@import "carouselItem";
 
 *,
-html {
-  background-origin: border-box;
+html,
+body {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
+  color: $text-primary;
 }
+
+// Reset UL
+ul {
+  list-style-type: none;
+}
+
+// Reset Links
+a,
+a:visited,
+a:hover,
+a:focus,
+a:active {
+  text-decoration: none;
+  color: #f0f0f0;
+  border: none;
+  outline: none;
+  padding: 1rem;
+}
+
+
 
 .main-container {
   background-color: $background-dark;
-  width: 100vw;
-  min-height: 100vh;
+  height: 100vh;
 }
 
 .material-icons {
