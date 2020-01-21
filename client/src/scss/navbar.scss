@@ -14,7 +14,7 @@
 }
 
 img {
-  max-height: 6vh;
+  max-height: 8vh;
 }
 
 .desktop-nav-ul {
@@ -43,7 +43,7 @@ img {
 .link-item:active,
 .link-item:focus {
   margin: 0;
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   height: 100%;
   text-decoration: none;
   color: $text-primary;
@@ -72,6 +72,10 @@ img {
 @media only screen and (min-width: 320px) and (max-width: 768px) {
   .desktop-nav {
     display: none;
+  }
+
+  .logo-wrapper {
+    margin: 0rem 1rem;
   }
 
   .menu-button {

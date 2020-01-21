@@ -1,7 +1,7 @@
 import React, { useEffect, Fragment } from 'react'
 import { Link } from 'react-router-dom';
 
-import '../../../scss/navdrawer.scss';
+import '../../../scss/sideDrawer.scss';
 
 const SideDrawer = props => {
 
