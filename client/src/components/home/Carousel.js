@@ -34,7 +34,7 @@ const Carousel = ({ animationTimer = 4000 }) => {
 
   useEffect(() => {
     const intervall = setInterval(() => {
-      console.log("carousel running");
+      // console.log("carousel running");
 
       setRender(state => (state + 1) % items.length);
 
@@ -56,8 +56,8 @@ const Carousel = ({ animationTimer = 4000 }) => {
               (render === index ? "Gallery-item--selected" : "")}
           >
 
-            <i className="material-icons">{item.icon}</i>
-            <h2>{item.title}</h2>
+            <i className="material-icons gradient">{item.icon}</i>
+            <h2 className="slogan">{item.title}</h2>
 
           </div>)}
 

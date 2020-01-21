@@ -1,4 +1,5 @@
 @import '_colors';
+@import '_keyframes';
 
 .navigation-wrapper {
   background-color: $primary;
@@ -8,9 +9,17 @@
   padding: 0;
 }
 
+.gradient-line {
+  height: 3px;
+  width: 100vw;
+  background: $gradient;
+  background-size: 200% 200%;
+  animation: Gradient 3s ease infinite;
+}
+
 .logo-wrapper {
   padding: 0;
-  margin: .2rem 2rem;
+  margin: 0.2rem 2rem;
 }
 
 img {
@@ -65,17 +74,13 @@ img {
 }
 
 
-
-
-
-
-@media only screen and (min-width: 320px) and (max-width: 768px) {
+@media only screen and(min-width: 320px) and(max-width: 768px) {
   .desktop-nav {
     display: none;
   }
 
   .logo-wrapper {
-    margin: 0rem 1rem;
+    margin: 0 1rem;
   }
 
   .menu-button {

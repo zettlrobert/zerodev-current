@@ -1,4 +1,5 @@
 @import './colors';
+@import './keyframes';
 
 .Gallery {
   // border: 2px solid red;
@@ -24,8 +25,8 @@
   margin-left: auto;
   margin-right: auto;
   visibility: hidden;
+  transition: ease 0.05s;
 }
-
 
 .Gallery-item--selected {
   // opacity: 1;
@@ -34,20 +35,19 @@
   right: 0;
   margin-left: auto;
   margin-right: auto;
-  animation: 8s fading;
-  transition: ease .65s;
+  // animation: 8s fading;
+  // transition: ease 0.65s;
 }
 
-@keyframes fading {
-  0% {
-    opacity: 1
-  }
+.gradient {
+  background: $gradient;
+  background-size: 400% 400%;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: Gradient 3s ease infinite;
+}
 
-  50% {
-    opacity: 0
-  }
-
-  100% {
-    opacity: 1
-  }
+.slogan {
+  padding: 1rem;
+  font-size: 2rem;
 }

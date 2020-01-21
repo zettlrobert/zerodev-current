@@ -35,8 +35,8 @@ const App = props => {
     changeState({ sideDrawerOpen: false })
   }
 
-  let backdrop
 
+  let backdrop
   if (initalState.sideDrawerOpen) {
     backdrop = <Backdrop click={backdropClickHandler} />
   }
@@ -47,7 +47,7 @@ const App = props => {
       <Fragment>
         <div className="main-container">
           <Navbar drawerClickHandler={drawerToggleClickHandler} />
-          <SideDrawer show={initalState.sideDrawerOpen} />
+          <SideDrawer show={initalState.sideDrawerOpen} closeDrawer={drawerToggleClickHandler} />
           {backdrop}
           <Switch>
             <Route exact path='/' component={Home}></Route>
