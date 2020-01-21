@@ -1,11 +1,19 @@
-import React, { Fragment } from 'react'
+import React, { useEffect, Fragment } from 'react'
 import { Link } from 'react-router-dom';
 
+import '../../../scss/navdrawer.scss';
 
-import logo from '../../assets/logo.svg'
-import '../../scss/navbar.scss'
+const SideDrawer = props => {
 
-const Navbar = () => {
+  useEffect(() => {
+    console.log("drawer mounted")
+  })
+
+
+  let drawerClasses = ['side-drawer']
+  if (props.show) {
+    drawerClasses = ['side-drawer open']
+  }
 
   const links = (
     <Fragment>
@@ -25,15 +33,12 @@ const Navbar = () => {
   )
 
   return (
-    <div className="navigation-wrapper">
-      <div className='logo-wrapper'>
-        <img src={logo} alt="zerodev" />
-      </div>
-      <ul>
+    <div className={drawerClasses}>
+      <ul className="mobile-nav-ul">
         {links}
       </ul>
     </div>
   )
 }
 
-export default Navbar
+export default SideDrawer

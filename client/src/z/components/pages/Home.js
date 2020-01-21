@@ -8,10 +8,6 @@ const Home = () => {
   return (
     <Fragment>
       <Navigation />
-
-      <div>
-        {/* <Carousel /> */}
-      </div>
     </Fragment>
   )
 }

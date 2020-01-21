@@ -7,7 +7,9 @@ body {
   margin: 0;
   padding: 0;
   color: $text-primary;
+  font-family: 'Roboto', sans-serif;
 }
+
 
 // Reset UL
 ul {
@@ -21,10 +23,10 @@ a:hover,
 a:focus,
 a:active {
   text-decoration: none;
-  color: #f0f0f0;
+  background-color: none;
   border: none;
-  outline: none;
-  padding: 1rem;
+  outline: 0;
+  -webkit-tap-highlight-color: none;
 }
 
 
@@ -32,6 +34,7 @@ a:active {
 .main-container {
   background-color: $background-dark;
   height: 100vh;
+  width: 100vw;
 }
 
 .material-icons {

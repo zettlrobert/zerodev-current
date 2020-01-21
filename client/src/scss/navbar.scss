@@ -5,6 +5,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 0;
 }
 
 .logo-wrapper {
@@ -13,32 +14,87 @@
 }
 
 img {
-  max-height: 5vh;
+  max-height: 6vh;
 }
 
-ul {
+.desktop-nav-ul {
+  width: 100%;
   list-style-type: none;
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  margin-right: 2rem;
+  margin-right: 1rem;
 }
 
+.desktop-nav {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-right: 1rem;
+}
 
-a,
-a:visited,
-a:hover,
-a:active,
-a:focus {
+.menu-button {
+  display: none;
+}
+
+.link-item,
+.link-item:visited,
+.link-item:hover,
+.link-item:active,
+.link-item:focus {
+  margin: 0;
   font-size: 1.4rem;
+  height: 100%;
   text-decoration: none;
   color: $text-primary;
+  padding: 1rem;
+  outline: none !important;
+  -webkit-tap-highlight-color: transparent;
+
 }
 
-a:hover,
-a:active {
+.link-item:hover,
+.link-item:active,
+.link-item:focus {
   transition: 0.6s ease-in-out;
-  background-color: $primary-accent;
-  border-bottom: 1px solid white;
+  color: $primary-accent;
   border-radius: 5px;
+  outline: none !important;
+  box-shadow: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+
+
+
+
+
+@media only screen and (min-width: 320px) and (max-width: 768px) {
+  .desktop-nav {
+    display: none;
+  }
+
+  .menu-button {
+    display: block;
+    background-color: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .menu-button:hover,
+  .menu-button:active,
+  .menu-button:focus,
+  .menu-button:visited {
+    background-color: transparent;
+    border: none;
+    outline: 0;
+    text-decoration: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  img {
+    max-height: 10vh;
+  }
+
 }
