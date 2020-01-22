@@ -16,13 +16,13 @@ import Projects from './components/pages/Projects';
 
 
 const App = props => {
+
   useEffect(() => {
-    //Init Materialize JS
     console.log("App Mounted...")
   })
 
   const [initalState, changeState] = useState({
-    sideDrawerOpen: false
+    sideDrawerOpen: false,
   })
 
   const drawerToggleClickHandler = () => {
@@ -45,8 +45,14 @@ const App = props => {
   return (
     <Router>
       <Fragment>
-        <Navbar drawerClickHandler={drawerToggleClickHandler} />
-        <SideDrawer show={initalState.sideDrawerOpen} closeDrawer={drawerToggleClickHandler} />
+        <Navbar
+          drawerClickHandler={drawerToggleClickHandler}
+
+        />
+        <SideDrawer
+          show={initalState.sideDrawerOpen}
+          closeDrawer={drawerToggleClickHandler}
+        />
         {backdrop}
         <div className="main-container">
           <Switch>

@@ -1,0 +1,28 @@
+@import '_colors';
+
+.projects-wrap {
+    padding: 2rem;
+}
+
+.projects-gallery {
+    // border: 1px solid white;
+
+    display: flex;
+    flex-wrap: wrap;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-auto-rows: minmax(200px, auto);
+    grid-gap: 3rem;
+}
+
+@media only screen and(min-width: 320px) and(max-width: 768px) {
+    .projects-gallery {
+        padding: 1rem;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+}

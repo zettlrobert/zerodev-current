@@ -1,12 +1,22 @@
-import React, { Fragment } from 'react'
+import React, { Fragment, useEffect } from 'react'
 import { Link } from 'react-router-dom';
-
+import { useLocation } from 'react-router';
 
 import logo from '../../../assets/logo.svg'
 import '../../../scss/navbar.scss'
 
 const Navbar = (props) => {
+  const location = useLocation();
+
+  useEffect(() => {
+    console.log(location.pathname);
+
+  })
+
+
+
   const { drawerClickHandler } = props;
+
 
   const links = (
     <Fragment>
@@ -35,7 +45,7 @@ const Navbar = (props) => {
             </Link>
           </div>
           <ul className="desktop-nav-ul">
-            <Link to='/' onClick={drawerClickHandler} className="menu-button" data-target=".mobile-nav">
+            <Link to='' onClick={drawerClickHandler} className="menu-button" data-target=".mobile-nav">
               <i className="material-icons">menu</i>
             </Link>
             <div className="desktop-nav">
