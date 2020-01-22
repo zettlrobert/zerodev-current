@@ -27,10 +27,12 @@ const Navbar = (props) => {
 
   return (
     <Fragment>
-      <Fragment>
+      <div className="Navbar-wrapper">
         <div className="navigation-wrapper">
           <div className='logo-wrapper'>
-            <img src={logo} alt="zerodev" />
+            <Link className="link-item" to='/'>
+              <img src={logo} alt="zerodev" />
+            </Link>
           </div>
           <ul className="desktop-nav-ul">
             <Link to='/' onClick={drawerClickHandler} className="menu-button" data-target=".mobile-nav">
@@ -41,10 +43,9 @@ const Navbar = (props) => {
             </div>
           </ul>
         </div>
-      </Fragment>
-      <Fragment>
+
         <div className="gradient-line"></div>
-      </Fragment>
+      </div>
     </Fragment>
   )
 }

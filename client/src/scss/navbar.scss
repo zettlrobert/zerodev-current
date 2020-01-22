@@ -1,6 +1,12 @@
 @import '_colors';
 @import '_keyframes';
 
+.Navbar-wrapper {
+  position: fixed;
+  top: 0;
+  width: 100vw;
+}
+
 .navigation-wrapper {
   background-color: $primary;
   display: flex;
@@ -11,7 +17,6 @@
 
 .gradient-line {
   height: 3px;
-  width: 100vw;
   background: $gradient;
   background-size: 200% 200%;
   animation: Gradient 3s ease infinite;
@@ -32,7 +37,7 @@ img {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  margin-right: 1rem;
+  padding-right: 1rem;
 }
 
 .desktop-nav {
@@ -52,7 +57,7 @@ img {
 .link-item:active,
 .link-item:focus {
   margin: 0;
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   height: 100%;
   text-decoration: none;
   color: $text-primary;

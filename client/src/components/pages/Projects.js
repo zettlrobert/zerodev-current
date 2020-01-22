@@ -1,9 +1,13 @@
 import React from 'react'
 
+import ProjectItem from '../projects/ProjectItem';
+
+
+
 const Projects = () => {
   return (
     <div>
-      Projects
+      <ProjectItem />
     </div>
   )
 }

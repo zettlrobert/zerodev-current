@@ -9,11 +9,9 @@
   align-items: center;
   position: absolute;
   top: 0;
-  bottom: 0;
-  margin-top: auto;
-  margin-bottom: auto;
-  height: 100%;
+  left: 0;
   width: 100vw;
+  height: 100vh;
   pointer-events: none;
 }
 
@@ -25,7 +23,7 @@
   margin-left: auto;
   margin-right: auto;
   visibility: hidden;
-  transition: ease 0.05s;
+  // transition: ease 0.1s;
 }
 
 .Gallery-item--selected {
@@ -35,8 +33,6 @@
   right: 0;
   margin-left: auto;
   margin-right: auto;
-  // animation: 8s fading;
-  // transition: ease 0.65s;
 }
 
 .gradient {

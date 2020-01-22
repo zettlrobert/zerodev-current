@@ -45,10 +45,10 @@ const App = props => {
   return (
     <Router>
       <Fragment>
+        <Navbar drawerClickHandler={drawerToggleClickHandler} />
+        <SideDrawer show={initalState.sideDrawerOpen} closeDrawer={drawerToggleClickHandler} />
+        {backdrop}
         <div className="main-container">
-          <Navbar drawerClickHandler={drawerToggleClickHandler} />
-          <SideDrawer show={initalState.sideDrawerOpen} closeDrawer={drawerToggleClickHandler} />
-          {backdrop}
           <Switch>
             <Route exact path='/' component={Home}></Route>
             <Route exact path='/contact' component={Contact}></Route>
