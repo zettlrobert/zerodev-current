@@ -1,0 +1,33 @@
+@import '_colors';
+
+.about-wrap {
+    padding: 3rem;
+}
+
+
+.comingSoon {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding: 3rem;
+}
+
+/* Thrid Loader */
+.gr-1 {
+    width: 85px;
+    height: 85px;
+    background: linear-gradient(-90deg, rgba(238, 119, 82, 0.9), rgba(231, 60, 126, 0.9), rgba(35, 166, 213, 0.9), rgba(35, 213, 171, 0.9));
+    background-size: 400% 400%;
+    /* Keyframes at top of file */
+    -webkit-animation: Gradient 4s ease infinite;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 0.5rem;
+}
+
+.h-1 {
+    font-size: 0.6rem;
+    color: white;
+}

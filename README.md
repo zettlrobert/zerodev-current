@@ -1,14 +1,27 @@
-## Server Dependencies
+# zerodev
 
-- express
-- config
+Personal Website to conntact me.
 
-## Server Dev Dependencies4
+Built in React on a Nodejs Server(Express).  Will provide my APIs and Documentation over this Site.
+
+![zerodev](./client/src/assets/portfolio/zerodev.png)
+
+## Planned API Routes
+ * /api/downloads
+ * /api/githubapi
+  
+
+### Server Dependencies
+
+* express
+* config
+
+### Server Dev Dependencies4
 
 - nodemon
 - concurrently
 
-## Client Dependencies
+### Client Dependencies
 
 - react-router-dom
 - materialize-css
@@ -17,4 +30,4 @@
 - free-solid-svg-icons
 - fontawesome-svg-core
 
-## Client Dev Dependencies
+### Client Dev Dependencies

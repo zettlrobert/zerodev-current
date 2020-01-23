@@ -2,7 +2,6 @@
 
 .project-item__wrap {
     position: relative;
-    // width: 25%;
     max-width: 400px;
     min-height: 500px;
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
@@ -30,7 +29,7 @@
 .project-image {
     width: 100%;
     object-fit: scale;
-    min-height: 250px;
+    min-height: 200px;
 
 }
 
