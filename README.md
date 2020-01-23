@@ -20,6 +20,8 @@ Built in React on a Nodejs Server(Express).  Will provide my APIs and Documentat
 
 - nodemon
 - concurrently
+- postbuild -- to built reactapp on server
+
 
 ### Client Dependencies
 

@@ -111,7 +111,7 @@
     .project-image {
         width: 100%;
         object-fit: scale;
-        min-height: 300px;
+        min-height: 250px;
     }
 
     .project-headline__wrap {
@@ -131,6 +131,7 @@
 
     .link-container {
         padding: 1rem;
+        padding-top: 3rem;
         display: flex;
         justify-content: space-between;
     }

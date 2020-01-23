@@ -1,0 +1,97 @@
+@import '_colors';
+
+.form-wrapper {
+    // border: 2px solid white;
+    padding: 3rem 1rem;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.contactMe-form {
+    // border: 2px solid red;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-arround;
+    align-items: center;
+}
+
+.contactMe-form__input {
+    min-width: 90%;
+    line-height: 2rem;
+    margin: 1rem;
+    padding: 0.5rem;
+    border: none;
+    border-bottom: 3px solid $primary;
+    background-color: $background-dark-light;
+}
+
+.input-message {
+    vertical-align: top;
+    margin-top: 1rem;
+    padding: 0.5rem;
+    min-width: 90%;
+    line-height: 1.2;
+    font-size: 1rem;
+    outline: 0;
+    border: none;
+    border-bottom: 3px solid $primary;
+    background-color: $background-dark-light;
+    height: 150px;
+    resize: none;
+}
+
+.contactMe-form__submit {
+    background-color: $primary;
+    border: none;
+    padding: 1rem;
+    margin: 1rem;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.contactMe-form__input:focus,
+.input-message:focus {
+    outline: 0;
+    transition: 0.6s;
+    background-color: $primary;
+    border-bottom: 3px solid $primary-accent;
+}
+
+.contactMe-form__submit:focus {
+    outline: 0;
+    background-color: $primary-accent;
+}
+
+.bot-catch {
+    visibility: hidden;
+}
+
+
+@media only screen and(min-width: 320px) and(max-width: 768px) {
+    .form-wrapper {
+        // border: 2px solid white;
+        padding: 3rem 1rem;
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    .contactMe-form {
+        // border: 2px solid red;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-arround;
+        align-items: center;
+    }
+
+    .contactMe-form__input {
+        line-height: 2rem;
+        margin: 1rem;
+        padding: 0.5rem;
+        border: none;
+        border-bottom: 3px solid $primary;
+        background-color: $background-dark-light;
+    }
+
+}

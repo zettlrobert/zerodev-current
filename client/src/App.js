@@ -13,7 +13,7 @@ import Home from './components/pages/Home';
 import Contact from './components/pages/Contact';
 import About from './components/pages/About';
 import Projects from './components/pages/Projects';
-
+import Test from './components/pages/Test';
 
 const App = props => {
 
@@ -60,6 +60,7 @@ const App = props => {
             <Route exact path='/contact' component={Contact}></Route>
             <Route exact path='/about' component={About}></Route>
             <Route exact path='/projects' component={Projects}></Route>
+            <Route expact path='/test' component={Test}></Route>
           </Switch>
         </div>
       </Fragment>
