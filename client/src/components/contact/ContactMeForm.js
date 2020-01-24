@@ -1,9 +1,11 @@
-import React, { Fragment, useState } from 'react'
+import React, { Fragment, useState, useEffect } from 'react'
 
-import Modal from '../utils/Modal'
+import Modal from '../../utils/Modal'
 import '../../scss/contactMeForm.scss'
+import { set } from 'mongoose';
 
-const ContactMeForm = () => {
+const ContactMeForm = props => {
+
 
   const [contactForm, setContactForm] = useState({
     name: '',
@@ -12,9 +14,10 @@ const ContactMeForm = () => {
     phone: '',
     message: '',
     catch: false,
-    modal: false,
-    error: ''
+    error: null,
+    test: ''
   });
+
 
 
   const onChange = e => setContactForm({ ...contactForm, [e.target.name]: e.target.value });
@@ -31,23 +34,27 @@ const ContactMeForm = () => {
 
     }
 
-    if (contactForm.name === '') {
+    if (contactForm.name === null) {
       console.log("Pleae enter a name");
+      setContactForm({ ...contactForm, error: "Please enter a Name" });
       return
     }
 
     if (contactForm.email === '') {
       console.log("Please enter a email")
+      setContactForm({ error: "Please enter email" });
       return
     }
 
     if (contactForm.subject === '') {
       console.log("Please enter subject")
+      setContactForm({ error: "Please enter subject" });
       return
     }
 
     if (contactForm.message === '') {
       console.log("Please enter message")
+      setContactForm({ error: "Please enter a message" });
       return
     }
 
@@ -72,14 +79,35 @@ const ContactMeForm = () => {
     }
   }
 
+  const resetError = (error) => {
+    console.log(`resetError from contactMeForm: ${error}`)
+
+    error = null;
+
+    console.log(`Error now: ${error}`)
+
+  }
 
 
+  useEffect(() => {
+
+
+    return () => {
+      setContactForm({ error: null })
+      console.log("cleaned")
+    }
+
+
+  }, [])
 
   return (
     <Fragment>
-      <Modal
-        error={contactForm.error}
-      />
+      {contactForm.error !== null ? (
+        <Modal
+          error={contactForm.error}
+          callbackToParent={resetError}
+        />
+      ) : null}
       <div className="form-wrapper">
 
         <form className="contactMe-form" onSubmit={onSubmit}>
