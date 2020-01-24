@@ -1,8 +1,7 @@
-import React, { Fragment, useState, useEffect } from 'react'
+import React, { Fragment, useState } from 'react'
 
 import Modal from '../../utils/Modal'
 import '../../scss/contactMeForm.scss'
-import { set } from 'mongoose';
 
 const ContactMeForm = props => {
 
@@ -13,11 +12,19 @@ const ContactMeForm = props => {
     subject: '',
     phone: '',
     message: '',
-    catch: false,
-    error: null,
-    test: ''
   });
 
+  const [honeypotState, setHoneypotState] = useState({
+    catch: false
+  })
+
+  const [modalState, setModalState] = useState({
+    modalOpen: false
+  })
+
+  const [errorState, setErrorState] = useState({
+    error: 'null'
+  })
 
 
   const onChange = e => setContactForm({ ...contactForm, [e.target.name]: e.target.value });
@@ -27,34 +34,39 @@ const ContactMeForm = props => {
     e.preventDefault();
 
     // Check Honeypot to prevent Spam
-    if (!(contactForm.catch === false)) {
+    if (!(honeypotState.catch === false)) {
       // console.log("bot catched")
       console.log('PLEASE NO EMPTY FIELDS')
+      setHoneypotState({ catch: true })
       return
 
     }
 
     if (contactForm.name === null) {
       console.log("Pleae enter a name");
-      setContactForm({ ...contactForm, error: "Please enter a Name" });
+      setErrorState({ error: "Please enter a Name" });
+      setModalState({ modalOpen: true })
       return
     }
 
     if (contactForm.email === '') {
       console.log("Please enter a email")
-      setContactForm({ error: "Please enter email" });
+      setErrorState({ error: "Please enter email" });
+      setModalState({ modalOpen: true })
       return
     }
 
     if (contactForm.subject === '') {
       console.log("Please enter subject")
-      setContactForm({ error: "Please enter subject" });
+      setErrorState({ error: "Please enter subject" });
+      setModalState({ modalOpen: true })
       return
     }
 
     if (contactForm.message === '') {
       console.log("Please enter message")
-      setContactForm({ error: "Please enter a message" });
+      setErrorState({ error: "Please enter a message" });
+      setModalState({ modalOpen: true })
       return
     }
 
@@ -79,35 +91,27 @@ const ContactMeForm = props => {
     }
   }
 
-  const resetError = (error) => {
-    console.log(`resetError from contactMeForm: ${error}`)
 
-    error = null;
-
-    console.log(`Error now: ${error}`)
-
+  const modalClickHandler = () => {
+    setModalState({ modalOpen: false })
+    setErrorState({ error: null })
   }
 
 
-  useEffect(() => {
+  let modal
+  if (modalState.modalOpen) {
+    modal = <Modal
+      modalHandler={modalClickHandler}
+      error={errorState.error} />
+  }
 
 
-    return () => {
-      setContactForm({ error: null })
-      console.log("cleaned")
-    }
-
-
-  }, [])
 
   return (
     <Fragment>
-      {contactForm.error !== null ? (
-        <Modal
-          error={contactForm.error}
-          callbackToParent={resetError}
-        />
-      ) : null}
+
+      {modal}
+
       <div className="form-wrapper">
 
         <form className="contactMe-form" onSubmit={onSubmit}>

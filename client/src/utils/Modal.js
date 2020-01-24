@@ -1,7 +1,6 @@
-import React, { Fragment, useState, useEffect } from 'react'
+import React, { Fragment, useState, } from 'react'
 
 import '../scss/modal.scss'
-import { callbackPromise } from 'nodemailer/lib/shared';
 
 const Modal = props => {
 
@@ -11,32 +10,22 @@ const Modal = props => {
     {
       closeIcon: "material-icons",
       modalShown: true,
-      error: error
+      error: props.error
     }
   )
 
-  const onClose = (event) => {
-    closeModal();
-    resetError();
-  }
 
-  const closeModal = e => {
+  const resetModal = e => {
     console.log("modal close clicked")
 
     updateModalState({ closeIcon: "material-icons close-modal__animation", modalSown: true })
 
     setTimeout(() => {
       updateModalState({ closeIcon: "material-icons", modalSown: false })
+
+      props.modalHandler()
     }, 1000)
 
-
-
-  }
-
-
-  const resetError = () => {
-    console.log("function reset Error")
-    props.callbackToParent(props.error);
   }
 
 
@@ -46,7 +35,7 @@ const Modal = props => {
         <div className={modal.modalShown === true ? 'modal' : 'modal-fadeout'}>
           <div className="close-modal">
             <button
-              onClick={onClose}
+              onClick={resetModal}
               className="close-modal__button"
             ><i
               className={modal.closeIcon}>
