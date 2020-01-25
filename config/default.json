@@ -1,4 +1,4 @@
 {
-  "mongoURI": "mongodb+srv://zerodev:NQRpDqhzAF@zerodev-atlas-cluster-u457t.mongodb.net/test?retryWrites=true&w=majority",
+  "mongoURI": "mongodb+srv://zerodev:@zerodev-atlas-cluster-u457t.mongodb.net/test?retryWrites=true&w=majority",
   "jwtSecret": "secret"
 }
