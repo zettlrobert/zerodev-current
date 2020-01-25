@@ -45,7 +45,8 @@ const Modal = props => {
           </div>
           <div className="modal-content">
             <span className="modal-message">
-              <h3 className="modal-error-headline">There was an Error:</h3>
+
+              <h3 className="modal-headline">{error === '' ? (<span className="span-color">{props.sent}</span>) : (<span className="span-color">Error</span>)}</h3>
               <p className="error-message">
                 {error}
               </p>

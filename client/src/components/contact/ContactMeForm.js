@@ -23,9 +23,13 @@ const ContactMeForm = props => {
   })
 
   const [errorState, setErrorState] = useState({
-    error: 'null'
+    error: ''
   })
 
+  const [mailState, setMailSentState] = useState({
+    status: false,
+    mailSent: ''
+  })
 
   const onChange = e => setContactForm({ ...contactForm, [e.target.name]: e.target.value });
 
@@ -83,14 +87,28 @@ const ContactMeForm = props => {
 
       const data = await res.json();
       const result = JSON.stringify(data);
+
       console.log(`My Data: ${result}`);
 
+      setMailSentState({ status: true, mailSent: 'Mail succesfully Delivered' })
+      sentSuccesfully();
+      console.log("sent succesfully");
     } catch (error) {
-
       console.log(error);
     }
   }
 
+  const sentSuccesfully = () => {
+    setModalState({ modalOpen: true })
+
+    setContactForm({
+      name: '',
+      email: '',
+      subject: '',
+      phone: '',
+      message: '',
+    })
+  }
 
   const modalClickHandler = () => {
     setModalState({ modalOpen: false })
@@ -102,7 +120,9 @@ const ContactMeForm = props => {
   if (modalState.modalOpen) {
     modal = <Modal
       modalHandler={modalClickHandler}
-      error={errorState.error} />
+      error={errorState.error}
+      sent={mailState.mailSent}
+    />
   }
 
 
