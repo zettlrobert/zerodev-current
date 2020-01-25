@@ -23,11 +23,11 @@ const About = () => {
         </div>
 
         <div className="comingSoon">
-          <div class="loaders-wrapper">
-            <div class="c-loader-wrap">
-              <div class="load-wrap">
-                <div class="gr-1">
-                  <div class="h-1">
+          <div className="loaders-wrapper">
+            <div className="c-loader-wrap">
+              <div className="load-wrap">
+                <div className="gr-1">
+                  <div className="h-1">
                     <h2>coming soon...</h2>
                   </div>
                 </div>

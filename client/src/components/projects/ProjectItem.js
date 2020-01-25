@@ -10,7 +10,7 @@ const ProjectItem = projectProps => {
   return (
     <Fragment>
       <div className="projects-wrap">
-        <div class="project-item__wrap">
+        <div className="project-item__wrap">
           <div className="project-image__wrap">
             <img className="project-image" src={imgURL} alt="homeboardsearch" />
           </div>
@@ -28,10 +28,12 @@ const ProjectItem = projectProps => {
               <i className="fab fa-github fontawesome-icon__style"></i>
               Github
           </a>
-            <a className="visit-link" href={liveURL} target="__blank">
-              <i className="far fa-eye fontawesome-icon__style"></i>
-              Visit
-          </a>
+            {liveURL !== '#' ? (
+              <a className="visit-link" href={liveURL} target="__blank">
+                <i className="far fa-eye fontawesome-icon__style"></i>
+                Visit
+              </a>
+            ) : null}
           </div>
         </div>
       </div>

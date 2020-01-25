@@ -40,7 +40,6 @@ router.post('/', (req, res) => {
     `
   }
 
-  console.log("Ready to send");
   // transporter.sendMail(mailOptions, (error, info) => {
   //   if (error) {
   //     console.error(error);
@@ -48,8 +47,6 @@ router.post('/', (req, res) => {
   //     console.log(`Email sent: ${info.response}`);
   //   }
   // })
-
-
 
   res.send({
     success: true,

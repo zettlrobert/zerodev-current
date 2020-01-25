@@ -68,6 +68,13 @@
   text-align: center;
 }
 
-h3 {
+.modal-error-headline {
+  padding: 1rem;
+  font-size: 1.1rem;
+  color: $primary-accent;
+}
+
+.error-message {
+  font-size: 1.6rem;
   padding: 1rem;
 }

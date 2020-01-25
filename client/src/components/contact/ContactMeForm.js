@@ -42,7 +42,7 @@ const ContactMeForm = props => {
 
     }
 
-    if (contactForm.name === null) {
+    if (contactForm.name === '') {
       console.log("Pleae enter a name");
       setErrorState({ error: "Please enter a Name" });
       setModalState({ modalOpen: true })
@@ -51,14 +51,14 @@ const ContactMeForm = props => {
 
     if (contactForm.email === '') {
       console.log("Please enter a email")
-      setErrorState({ error: "Please enter email" });
+      setErrorState({ error: "Please enter a valid Email" });
       setModalState({ modalOpen: true })
       return
     }
 
     if (contactForm.subject === '') {
       console.log("Please enter subject")
-      setErrorState({ error: "Please enter subject" });
+      setErrorState({ error: "Please enter mail subject" });
       setModalState({ modalOpen: true })
       return
     }
