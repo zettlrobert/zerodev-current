@@ -40,13 +40,13 @@ router.post('/', (req, res) => {
     `
   }
 
-  // transporter.sendMail(mailOptions, (error, info) => {
-  //   if (error) {
-  //     console.error(error);
-  //   } else {
-  //     console.log(`Email sent: ${info.response}`);
-  //   }
-  // })
+  transporter.sendMail(mailOptions, (error, info) => {
+    if (error) {
+      console.error(error);
+    } else {
+      console.log(`Email sent: ${info.response}`);
+    }
+  })
 
   res.send({
     success: true,
