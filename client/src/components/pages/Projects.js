@@ -19,7 +19,7 @@ const Projects = () => {
     allProjects: [{
       title: "Hombeboardsearch",
       imgURL: hbs,
-      desc: "Metasearch engine Reactjs Frontend, Nodejs Backend. A custom Searchquery was sent to Google, Bing and DuckDuckGo API.Results are Displayed in the Dashboard.",
+      desc: "Metasearch engine Reactjs Frontend, Nodejs Backend. A custom Searchquery was sent to Google, Bing and DuckDuckGo API. Results are displayed in the HBS-Dashboard, where additonal Widgets can be configured",
       githubURL: "#",
       liveURL: "#"
     },
@@ -40,28 +40,28 @@ const Projects = () => {
     {
       title: "Contact Keeper",
       imgURL: placeholder,
-      desc: "Metasearch engine Reactjs Frontend, Nodejs Backend. A custom Searchquery was sent to Google, Bing and DuckDuckGo API.Results are Displayed in the Dashboard",
+      desc: "A simple Concat Web Application, written in Reactjs.",
       githubURL: "https://github.com/zettlrobert/mern-contact-keeper",
       liveURL: "#"
     },
     {
       title: "zerodev-musicbot",
       imgURL: musicbot,
-      desc: "Nodejs Bot for the Chat Application Discord, with a Library and Api you can pass an URL the Bot will join the voice Channel and play the Sound.",
+      desc: "A simple Bot written in Nodejs. Integrateable into the Chat Application 'Discord'. You can pass an URL and the Bot will join the voice Channel of the user and play the music from the passed link.",
       githubURL: "https://github.com/zettlrobert/zerodev-musicbot",
       liveURL: "#"
     },
     {
       title: "simple-logger",
       imgURL: placeholder,
-      desc: "React Redux Application to get some first Impressions of how it is used.",
+      desc: "React Redux Application to get some practice using a State Container Layer in React.",
       githubURL: "https://github.com/zettlrobert/simple-logger",
       liveURL: "#"
     },
     {
       title: "summoner-tracker",
       imgURL: summonerTracker,
-      desc: "A simple Website where you can Track the Cooldown Timers from a competetive Game.",
+      desc: "A simple website where you can track the cooldown timers from a game.",
       githubURL: "https://league-summoner-tracker.web.app/",
       liveURL: "#"
     }]
