@@ -33,3 +33,11 @@ Built in React on a Nodejs Server(Express).  Will provide my APIs and Documentat
 - fontawesome-svg-core
 
 ### Client Dev Dependencies
+
+
+
+
+### Deployment
+* install heroku globally
+* in server.js set static folder --> client built folder
+
