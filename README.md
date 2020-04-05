@@ -1,15 +1,15 @@
 # zerodev
 
-Personal Website to conntact me.
+![cover](docs/cover.png)
 
-Built in React on a Nodejs Server(Express).  Will provide my APIs and Documentation over this Site.
+Personal page and portfolio me.
 
-![zerodev](./client/src/assets/portfolio/zerodev.png)
+Client built in React, backend is a nodejs-server(Express).
+I will provide APIs and Documentation on this site.
+
 
 ## Planned API Routes
  * /api/downloads
- * /api/githubapi
-  
 
 ### Server Dependencies
 
@@ -40,4 +40,5 @@ Built in React on a Nodejs Server(Express).  Will provide my APIs and Documentat
 ### Deployment
 * install heroku globally
 * in server.js set static folder --> client built folder
-
+* setup heroku-postbuild in package.json
+* include clientside dependencies in install script
