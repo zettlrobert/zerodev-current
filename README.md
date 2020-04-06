@@ -2,7 +2,7 @@
 
 ![cover](docs/cover.png)
 
-Personal page and portfolio me.
+My personal page and portfolio.
 
 Client built in React, backend is a nodejs-server(Express).
 I will provide APIs and Documentation on this site.
