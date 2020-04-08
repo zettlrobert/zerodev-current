@@ -4,16 +4,23 @@
     padding: 2rem;
 }
 
+.spinner-wrap {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    padding-top: 8vh;
+}
+
 .projects-gallery {
     // border: 1px solid white;
 
     display: flex;
     flex-wrap: wrap;
-
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     grid-auto-rows: minmax(200px, auto);
-    grid-gap: 3rem;
+    grid-gap: 5rem;
 }
 
 @media only screen and(min-width: 320px) and(max-width: 768px) {
@@ -25,6 +32,7 @@
     .projects-gallery {
         // padding: 1rem;
         margin: 0;
+        padding-top: 8vh;
         display: flex;
         justify-content: center;
         align-items: center;

@@ -28,12 +28,15 @@ const ProjectItem = projectProps => {
               <i className="fab fa-github fontawesome-icon__style"></i>
               Github
           </a>
-            {liveURL !== '#' ? (
-              <a className="visit-link" href={liveURL} target="__blank">
+            {liveURL === null || liveURL === '' ? (
+              null
+
+            ) :
+              (<a className="visit-link" href={liveURL} target="__blank">
                 <i className="far fa-eye fontawesome-icon__style"></i>
                 Visit
-              </a>
-            ) : null}
+              </a>)
+            }
           </div>
         </div>
       </div>

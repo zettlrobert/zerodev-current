@@ -3,6 +3,15 @@ const router = express.Router();
 const nodemailer = require('nodemailer');
 
 
+const auth = {
+  type: 'oauth2',
+  user: process.env.NODEMAILER_USER,
+  clientID: process.env.CLIENT_ID,
+  clientSecret: process.env.CLIENT_SECRET,
+  refreshToken: process.env.REFRESH_TOKEN,
+}
+
+
 // @route       post api/contactform
 // @desc        post data from Contact Form
 // @access      public

@@ -1,1 +1,0 @@
-export const 'GET_CAROUSELITEM' = 'GET_CAROUSELITEM'; 

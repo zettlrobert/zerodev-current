@@ -6,9 +6,7 @@ import './scss/main.scss'
 
 import Navbar from './components/layout/Navigation/Navbar'
 import SideDrawer from './components/layout/Navigation/SideDrawer'
-
 import Backdrop from './utils/Backdrop';
-
 import Home from './components/pages/Home';
 import Contact from './components/pages/Contact';
 import About from './components/pages/About';
