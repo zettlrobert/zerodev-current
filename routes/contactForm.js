@@ -1,66 +1,73 @@
 const express = require('express');
 const router = express.Router();
-const nodemailer = require('nodemailer');
+const sgMail = require('@sendgrid/mail');
 
+const asyncHandler = fn => (req, res, next) => Promise.resolve(fn(req, res, next)).catch(next);
 
-const auth = {
-  type: 'oauth2',
-  user: process.env.NODEMAILER_USER,
-  clientID: process.env.CLIENT_ID,
-  clientSecret: process.env.CLIENT_SECRET,
-  refreshToken: process.env.REFRESH_TOKEN,
+sgMail.setApiKey(process.env.SEND_GRID_API)
+
+const sendMail = async (msg) => {
+  try {
+    let response = await sgMail.send(msg)
+    return response;
+  } catch (err) {
+    console.log(err)
+
+    if (err.response) {
+      console.log(err.response.body)
+    }
+  }
 }
 
-
-// @route       post api/contactform
-// @desc        post data from Contact Form
-// @access      public
-
-router.post('/', (req, res) => {
-
+/**
+ * @desc posting to endpoint and sending mail
+ * @route post /api/contactform
+ * @access public no auth
+ */
+router.post('/', asyncHandler(async (req, res, next) => {
+  // formdata request object 
   const data = req.body;
-
   const name = req.body.name;
   const email = req.body.email;
   const subject = req.body.subject;
   const phone = req.body.phone;
   const message = req.body.message;
 
-
-  const transporter = nodemailer.createTransport({
-    host: process.env.NODEMAILER_SERVICE,
-    port: 465,
-    secure: true,
-    auth: {
-      user: process.env.NODEMAILER_USER,
-      pass: process.env.GMAIL_PW
+  // message object for @sendgrid/mail
+  const msg = {
+    "personalizations": [
+      {
+        "to": [
+          {
+            "email": 'zrdev.info@gmail.com'
+          }
+        ],
+        "subject": subject
+      }
+    ],
+    "from": {
+      "email": email
+    },
+    "content": [{
+      "type": "text/plain",
+      "value": `
+        From: ${name} \n
+        Subject: ${subject} \n
+        Phone: ${phone} \n
+        Message: ${message} \n
+      `
     }
-  });
-
-
-  const mailOptions = {
-    from: process.env.NODEMAILER_USER,
-    to: process.env.NODEMAILER_RECEIVER,
-    subject: subject,
-    text: `
-    FROM: ${name} - ${email} with Phonenumber: ${phone} \n
-    SUBJECT: ${subject} \n \n
-    Message: ${message}
-    `
+    ]
   }
 
-  transporter.sendMail(mailOptions, (error, info) => {
-    if (error) {
-      console.error(error);
-    } else {
-      console.log(`Email sent: ${info.response}`);
-    }
-  })
+  // sending mail
+  let response = await sendMail(msg);
 
+  // sending response to frontend
   res.send({
     success: true,
-    sentData: data
+    sentData: response
   });
-})
+}))
 
 module.exports = router;
