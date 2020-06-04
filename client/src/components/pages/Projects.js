@@ -18,7 +18,7 @@ const Projects = () => {
   const getRepos = async () => {
     setProjectState({ loading: true })
     try {
-      const res = await fetch(`https://api.github.com/users/zettlrobert/repos`, {
+      const res = await fetch(`https://api.github.com/users/zettlrobert/repos?sort=updated `, {
         client_id: process.env.REACT_APP_GITHUB_CLIENT_ID,
         client_secret: process.env.REACT_APP_CLIENT_SECRET,
       })
