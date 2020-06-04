@@ -19,7 +19,7 @@ const App = props => {
     console.log("App Mounted...")
   })
 
-  const [initalState, changeState] = useState({
+  const [initialState, changeState] = useState({
     sideDrawerOpen: false,
   })
 
@@ -35,7 +35,7 @@ const App = props => {
 
 
   let backdrop
-  if (initalState.sideDrawerOpen) {
+  if (initialState.sideDrawerOpen) {
     backdrop = <Backdrop click={backdropClickHandler} />
   }
 
@@ -48,7 +48,7 @@ const App = props => {
 
         />
         <SideDrawer
-          show={initalState.sideDrawerOpen}
+          show={initialState.sideDrawerOpen}
           closeDrawer={drawerToggleClickHandler}
         />
         {backdrop}
@@ -58,7 +58,7 @@ const App = props => {
             <Route exact path='/contact' component={Contact}></Route>
             <Route exact path='/about' component={About}></Route>
             <Route exact path='/projects' component={Projects}></Route>
-            <Route expact path='/test' component={Test}></Route>
+            <Route exact path='/test' component={Test}></Route>
           </Switch>
         </div>
       </Fragment>
