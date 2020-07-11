@@ -3,15 +3,15 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 import './scss/main.scss'
 
-
-import Navbar from './components/layout/Navigation/Navbar'
-import SideDrawer from './components/layout/Navigation/SideDrawer'
+import ScrollToTop from './utils/ScrollToTop';
+import Navbar from './components/layout/Navigation/Navbar';
+import SideDrawer from './components/layout/Navigation/SideDrawer';
 import Backdrop from './utils/Backdrop';
 import Home from './components/pages/Home';
 import Contact from './components/pages/Contact';
 import About from './components/pages/About';
 import Projects from './components/pages/Projects';
-import Test from './components/pages/Test';
+import LegalDetails from './components/legaldetails/LegalDetails';
 
 const App = props => {
 
@@ -43,6 +43,7 @@ const App = props => {
   return (
     <Router>
       <Fragment>
+        <ScrollToTop />
         <Navbar
           drawerClickHandler={drawerToggleClickHandler}
 
@@ -58,7 +59,7 @@ const App = props => {
             <Route exact path='/contact' component={Contact}></Route>
             <Route exact path='/about' component={About}></Route>
             <Route exact path='/projects' component={Projects}></Route>
-            <Route exact path='/test' component={Test}></Route>
+            <Route exact path='/legaldetails' component={LegalDetails}></Route>
           </Switch>
         </div>
       </Fragment>
