@@ -1,5 +1,6 @@
 import React, { Fragment } from 'react'
 
+import Footer from '../layout/Footer/Footer';
 import '../../scss/about.scss'
 
 const About = () => {
@@ -37,6 +38,7 @@ const About = () => {
         </div>
 
       </div>
+      <Footer />
     </Fragment>
   )
 }

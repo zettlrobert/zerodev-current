@@ -2,7 +2,7 @@ import React, { useState, useEffect, Fragment } from 'react'
 
 import ProjectItem from '../projects/ProjectItem';
 import Spinner from '../../utils/Spinner';
-
+import Footer from '../layout/Footer/Footer';
 import '../../scss/projects.scss';
 
 const Projects = () => {
@@ -52,7 +52,7 @@ const Projects = () => {
             {projectState.repos.map((repo, index) => (
               <ProjectItem
                 key={repo.id}
-                imgURL={`https://raw.githubusercontent.com/zettlrobert/${repo.name}/master/docs/cover.png`}
+                imgURL={`https://raw.githubusercontent.com/zettlrobert/${repo.name}/master/docs/cover.png` }
                 title={repo.name}
                 desc={repo.description}
                 githubURL={repo.html_url}
@@ -64,6 +64,7 @@ const Projects = () => {
         </div>
 
       </div>
+      <Footer />
     </Fragment>
   )
 }
